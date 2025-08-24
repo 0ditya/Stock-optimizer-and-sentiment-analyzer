@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+input, button {
+    margin: 10px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+#chartContainer {
+    margin-top: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ticker {
+    overflow: hidden;
+    background-color: #f0f0f0; /* Light grey background */
+    width: 100%;
+    height: 50px; /* Adjust based on your design */
+    position: relative;
+}
+
+.track {
+    white-space: nowrap;
+    will-change: transform;
+    animation: move 30s linear infinite; /* Adjust timing as needed */
+}
+
+.track > div {
+    display: inline-block;
+    padding: 0 20px; /* Spacing between stocks */
+    line-height: 50px; /* Center text vertically */
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Move the entire width of the ticker */
+    }
+}
